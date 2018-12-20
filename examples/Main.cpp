@@ -1,9 +1,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/objdetect.hpp>
 #include <opencv2/highgui.hpp>
-
 #include <iostream>
-
 #include "processmatinlibrary_pub.h"
 
 using namespace std;
@@ -25,7 +23,7 @@ void testEmpty(cv::Mat test_img, std::string msg)
 
 int main(int argc, char* argv[])
 {
-	// Classify and get probabilities
+    // Classify and get probabilities
     Mat test_img = imread(argv[1], CV_LOAD_IMAGE_COLOR);
 
     testEmpty(test_img, "After load image");
@@ -50,7 +48,7 @@ int main(int argc, char* argv[])
 
     cout << "In main " << endl;
     /*
-     * If I define _MAKE_SEGFAULT_OPENCV, I got errors
+     * If I define _MAKE_ASSERT_OPENCV, I got errors
     OpenCV(3.4.1) Error: Assertion failed (0 <= _dims && _dims <= 32) in setSize, file /home/diego/Code/opencv/modules/core/src/matrix.cpp, line 209
     terminate called after throwing an instance of 'cv::Exception'
       what():  OpenCV(3.4.1) /home/diego/Code/opencv/modules/core/src/matrix.cpp:209: error: (-215) 0 <= _dims && _dims <= 32 in function setSize
@@ -59,6 +57,4 @@ int main(int argc, char* argv[])
     imshow("Test before close", test_img); //If i comment this two lines, I got segmentation faults (OpenCV exception)
     waitKey(0);
 #endif
-
-
 }
