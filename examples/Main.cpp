@@ -9,7 +9,7 @@
 using namespace std;
 using namespace cv;
 
-//#define _MAKE_SEGFAULT_OPENCV 1
+#define _MAKE_ASSERT_OPENCV 1
 //#define _MAKE_SEGFAULT_ 1
 
 void testEmpty(cv::Mat test_img, std::string msg)
@@ -55,7 +55,7 @@ int main(int argc, char* argv[])
     terminate called after throwing an instance of 'cv::Exception'
       what():  OpenCV(3.4.1) /home/diego/Code/opencv/modules/core/src/matrix.cpp:209: error: (-215) 0 <= _dims && _dims <= 32 in function setSize
     */
-#ifndef _MAKE_SEGFAULT_OPENCV
+#ifndef _MAKE_ASSERT_OPENCV
     imshow("Test before close", test_img); //If i comment this two lines, I got segmentation faults (OpenCV exception)
     waitKey(0);
 #endif
