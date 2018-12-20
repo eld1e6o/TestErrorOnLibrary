@@ -5,7 +5,7 @@ project(test_pub_priv)
 set(CMAKE_CXX_FLAGS "-Wall -Wextra -O3 -std=c++11")
 
 #set(OpenCV_INCLUDE_DIRS "./include/")
-find_package(OpenCV QUIET ) # HINTS /opt/ocv)
+find_package(OpenCV REQUIRED) # HINTS /opt/ocv)
 
 message(" ** Test with public private libraries ** ")
 
