@@ -9,8 +9,8 @@
 using namespace std;
 using namespace cv;
 
-#define _MAKE_SEGFAULT_OPENCV 1
-#define _MAKE_SEGFAULT_ 1
+//#define _MAKE_SEGFAULT_OPENCV 1
+//#define _MAKE_SEGFAULT_ 1
 
 void testEmpty(cv::Mat test_img, std::string msg)
 {

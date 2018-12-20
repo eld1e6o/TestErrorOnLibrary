@@ -16,7 +16,7 @@ include_directories(./hpp SRC_LIST)
 FILE(GLOB_RECURSE LibFiles "./hpp/*.h")
 add_custom_target(headers SOURCES ${LibFiles})
 
-add_library(myFramework SHARED ${SRC_LIST} )
+add_library(myFramework ${SRC_LIST} )
 add_executable(test_pub_priv ./examples/Main.cpp)
 target_link_libraries(test_pub_priv ${OpenCV_LIBS} myFramework)
 
