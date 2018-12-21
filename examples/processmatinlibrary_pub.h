@@ -11,6 +11,7 @@ public:
     ProcessMatInLibrary();
     bool flip(cv::Mat image);
     bool myTest(cv::Mat one);
+    char discard[sizeof(cv::Mat)];
 };
 
 #endif // PROCESSMATINLIBRARY_H
